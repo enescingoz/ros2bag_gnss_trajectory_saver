@@ -34,7 +34,7 @@ python3 extract_gnss_trajectory.py --bag /path/to/rosbag/folder --topic /gnss_to
 
 In this example:
 - `/path/to/rosbag/folder` should be replaced with the actual path to your ROS 2 bag file folder.
-- `/gnss_topic_name` should be replaced with the actual topic name that contains the GNSS data you want to extract.
+- `/gnss_topic_name` should be replaced with the actual topic name that contains the GNSS data you want to extract. (sensor_msgs/msg/NavSatFix)
 
 ### Script Description
 
