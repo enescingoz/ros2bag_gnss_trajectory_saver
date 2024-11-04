@@ -16,6 +16,9 @@ To run this script, you need to have the following dependencies installed:
 You can install these dependencies using `pip3`:
 
 ```sh
+python3 -m venv bag2gnsstrajectory
+source bag2gnsstrajectory/bin/activate
+
 pip3 install rosbags utm pylas
 ```
 
