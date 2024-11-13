@@ -60,7 +60,7 @@ All output files are saved in an output directory. The directory is cleaned befo
 - KITTI Format: output/utm_kitti_trajectory.txt
 - CSV File: output/utm_trajectory.csv
 
-##### 3. Latitude, Longitude, and Altitude
+##### 3. Longitude, Latitude and Altitude
 - TXT File: output/longitude_latitude_altitude.txt
 - CSV File: output/longitude_latitude_altitude.csv
 
