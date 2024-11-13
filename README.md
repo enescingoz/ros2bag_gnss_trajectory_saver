@@ -61,8 +61,8 @@ All output files are saved in an output directory. The directory is cleaned befo
 - CSV File: output/utm_trajectory.csv
 
 ##### 3. Latitude, Longitude, and Altitude
-- TXT File: output/lat_lon_alt_trajectory.txt
-- CSV File: output/lat_lon_alt_trajectory.csv
+- TXT File: output/longitude_latitude_altitude.txt
+- CSV File: output/longitude_latitude_altitude.csv
 
 Each of these formats provides the trajectory in a different structure for use in analysis or visualization applications.
 
