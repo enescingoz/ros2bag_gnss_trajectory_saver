@@ -40,19 +40,31 @@ In this example:
 - `/gnss_topic_name` should be replaced with the actual topic name that contains the GNSS data you want to extract. (sensor_msgs/msg/NavSatFix)
 
 ### Script Description
-
-1. The script reads a ROS 2 bag file specified by the `--bag` argument.
-2. It extracts GNSS messages from the topic specified by the `--topic` argument.
+1. The script reads a ROS 2 bag file specified by the --bag argument.
+2. It extracts GNSS messages from the topic specified by the --topic argument.
 3. Each GNSS message is converted to UTM coordinates.
 4. Local coordinates relative to the first UTM coordinate are calculated.
-5. The local GNSS trajectory and UTM trajectory are saved to `.las` files in the `output` directory.
-6. The output directory is cleaned before saving new trajectories.
-7. The UTM zone is printed at the end of the script.
+5. The GNSS data is saved in multiple formats for convenience and compatibility.
 
 ### Output Files
 
-- Local GNSS trajectory file: `output/local_gnss_trajectory.las`
-- UTM trajectory file: `output/utm_trajectory.las`
+All output files are saved in an output directory. The directory is cleaned before saving new trajectories.
+
+##### 1. Local GNSS Trajectory
+- LAS File: output/local_gnss_trajectory.las
+- KITTI Format: output/local_kitti_trajectory.txt
+- CSV File: output/local_gnss_trajectory.csv
+
+##### 2. UTM GNSS Trajectory
+- LAS File: output/utm_trajectory.las
+- KITTI Format: output/utm_kitti_trajectory.txt
+- CSV File: output/utm_trajectory.csv
+
+##### 3. Longitude, Latitude and Altitude
+- TXT File: output/longitude_latitude_altitude.txt
+- CSV File: output/longitude_latitude_altitude.csv
+
+Each of these formats provides the trajectory in a different structure for use in analysis or visualization applications.
 
 ## Example
 
