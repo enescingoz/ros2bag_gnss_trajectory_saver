@@ -19,7 +19,7 @@ You can install these dependencies using `pip3`:
 python3 -m venv bag2gnsstrajectory
 source bag2gnsstrajectory/bin/activate
 
-pip3 install rosbags utm pylas
+pip3 install rosbags utm pylas geographiclib
 ```
 
 ## Usage
@@ -59,10 +59,16 @@ All output files are saved in an output directory. The directory is cleaned befo
 - LAS File: output/utm_trajectory.las
 - KITTI Format: output/utm_kitti_trajectory.txt
 - CSV File: output/utm_trajectory.csv
+- CSV File: output/utm_trajectory_yaw.csv (UTM trajectory with yaw angles)
 
-##### 3. Longitude, Latitude and Altitude
-- TXT File: output/longitude_latitude_altitude.txt
-- CSV File: output/longitude_latitude_altitude.csv
+##### 3. MGRS GNSS Trajectory
+- LAS File: output/mgrs_trajectory.las
+- CSV File: output/mgrs_trajectory.csv
+- CSV File: output/mgrs_trajectory_yaw.csv (MGRS trajectory with yaw angles)
+
+##### 4. Latitude, Longitude, and Altitude
+- TXT File: output/lat_lon_alt_trajectory.txt
+- CSV File: output/lat_lon_alt_trajectory.csv
 
 Each of these formats provides the trajectory in a different structure for use in analysis or visualization applications.
 
@@ -73,7 +79,3 @@ python3 extract_gnss_trajectory.py --bag /path/to/rosbag/folder --topic /gnss_to
 ```
 
 This command will create the `output` directory, clean it, and save the local and UTM GNSS trajectories in it.
-
-## TODO
-
-- Save MGRS trajectory
